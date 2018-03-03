@@ -52,11 +52,11 @@ The images below includes a preview of the dataset from class 0 - 41. Their corr
 
 <img align="left" src="./README/preview1.png">
 <img align="left" src="./README/preview2.png">
+<br /><br /><br /><br /><br /><br /><br />
 
 ### Design and Test Model Architecture
 
-#### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
-
+#### 1. Image preprocessing and data augmentation
 Three preprocess techniques are used to preprocess image data: gray scaling, normalize pixel value so that every pixel preserves values from [-1, 1] and Lastly standardizing. 
 
 Gary scaling the images is a crutial part to simplify training process but eliminating the 3 channels complication at input phase. This tecnique is effective because after previewing the data set, all classes have distinct shapes which means they don't need to be uniquely identified by color. Thus gray scaling the training data set will not sacrifies training accuracy.
@@ -76,8 +76,8 @@ Notice that the valid and test set is the same as before. Augmenting the valid a
 <img align="left" src="./README/test_remastered.png">
 <img align="left" src="./README/valid_remastered.png">
 <img align="left" src="./README/test_remastered.png">
-
-#### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
+<br /><br /><br /><br /><br /><br /><br />
+#### 2. Model Architecture
 
 My final model consisted of the following layers:
 
