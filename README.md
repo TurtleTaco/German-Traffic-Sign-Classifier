@@ -43,37 +43,39 @@ The data set summary are retrived from numpy and visualized with matplotlib libr
 
 <img align="left" src="./README/test_raw.png">
 <img align="left" src="./README/valid_raw.png">
-<img align="center" src="./README/test_raw.png">
+<img align="left" src="./README/test_raw.png">
 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
 #### 2. Exploratory visualization of the dataset.
 
 The images below includes a preview of the dataset from class 0 - 41. Their corresponding sign name can be found in [mapping](https://github.com/apobec3f/German-Traffic-Sign-Classifier/tree/master/mapping)
 
-![alt text][image1]
+<img align="left" src="./README/preview1.png">
+<img align="left" src="./README/preview2.png">
 
-### Design and Test a Model Architecture
+### Design and Test Model Architecture
 
 #### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
-As a first step, I decided to convert the images to grayscale because ...
+Three preprocess techniques are used to preprocess image data: gray scaling, normalize pixel value so that every pixel preserves values from [-1, 1] and Lastly standardizing. 
 
-Here is an example of a traffic sign image before and after grayscaling.
+Gary scaling the images is a crutial part to simplify training process but eliminating the 3 channels complication at input phase. This tecnique is effective because after previewing the data set, all classes have distinct shapes which means they don't need to be uniquely identified by color. Thus gray scaling the training data set will not sacrifies training accuracy.
 
-![alt text][image2]
+Normalization is used so that the input pixel values have similar size, preventing bigger (closer to 255) values being treated with high priority compared to lighter color pixels (closer to 0) thus introducing biases during training.
 
-As a last step, I normalized the image data because ...
+standadizing techniques are used to normalized input pixel values of every image to have 0 mean because weight decay and Bayesian estimation (not used here but broadly used in machine learning field) can be done more conveniently with standardized inputs.
 
-I decided to generate additional data because ... 
+The above three steps are performed on a testing image as shown below:
 
-To add more data to the the data set, I used the following techniques because ... 
+<img align="left" src="./README/filter.png">
 
-Here is an example of an original image and an augmented image:
+However, another issue of the dataset is big variance between the number of training images among all classes as we see before. To prevent such difference introducing biases during training, data augmentation techniques are used to generate "fake" data from existing training data. To do this, four techniques are used: flip left and right, flip up and down, rotate 90 degrees and zoom in by a factor of 1.5. At first, the mean number of data set if calculated (eg. training set has a mean number of data of 900 images/class). Then all classes with less images are augmented until they have at least 900 images utilizing the above 4 techniques. The final training, valid and test data are as follows.
 
-![alt text][image3]
+Notice that the valid and test set is the same as before. Augmenting the valid and test dataset will change the evaluation metrics, and results in different testing conditions and accuracy evaluation compared to other researchers using the same validation and test set
 
-The difference between the original data set and the augmented data set is the following ... 
-
+<img align="left" src="./README/test_remastered.png">
+<img align="left" src="./README/valid_remastered.png">
+<img align="left" src="./README/test_remastered.png">
 
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
