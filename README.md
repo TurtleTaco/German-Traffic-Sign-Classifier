@@ -31,20 +31,23 @@ The goals / steps of this project are the following:
 
 ### Data Set Summary & Exploration
 
-#### 1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
+#### 1. Data set summary.
 
-I used the pandas library to calculate summary statistics of the traffic
-signs data set:
+The data set summary are retrived from numpy and visualized with matplotlib library.
 
-* The size of training set is ?
-* The size of the validation set is ?
-* The size of test set is ?
-* The shape of a traffic sign image is ?
-* The number of unique classes/labels in the data set is ?
+* The size of training set is 34799
+* The size of the validation set is 4410
+* The size of test set is 12630
+* The shape of a traffic sign image is 32x32x3
+* The number of unique classes/labels in the data set is 43
+
+<img align="left" src="./README/test_raw.png">
+<img align="left" src="./README/valid_raw.png">
+<img align="left" src="./README/test_raw.png">
 
 #### 2. Exploratory visualization of the dataset.
 
-The images below includes a preview of the dataset from class 0 - 41. Their corresponding sign name can be found in [mapping]()
+The images below includes a preview of the dataset from class 0 - 41. Their corresponding sign name can be found in [mapping](https://github.com/apobec3f/German-Traffic-Sign-Classifier/tree/master/mapping)
 
 ![alt text][image1]
 
