@@ -78,6 +78,7 @@ Notice that the valid and test set is the same as before. Augmenting the valid a
 <img align="left" src="./README/valid_remastered.png">
 <img align="left" src="./README/test_remastered.png">
 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
 #### 2. Model Architecture
 
 My final model consisted of the following layers:
