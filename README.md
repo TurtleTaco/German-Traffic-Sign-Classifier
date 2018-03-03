@@ -138,7 +138,7 @@ The model tuning process consists of the following steps:
 
 The new images used for testing are shown as below:
 <img align="left" src="./README/five_web.png">
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br />
 These images has much higher qualities even if being resized to 32x32. They should be easy for the model to classify.
 
 #### 2. Test results of new images
