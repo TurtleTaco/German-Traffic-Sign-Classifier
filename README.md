@@ -167,4 +167,4 @@ The code for making predictions on my final model is located in the 14th cell of
 
 <img align="left" src="./README/feature_map.png">
 
-
+As shwon in the above images, the neural network utilizing the edges and intensity of pixels in the earlier layers and later combine all low level features to produce higher level feature which looks similar to the actual input image.
