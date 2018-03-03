@@ -26,7 +26,7 @@ The goals / steps of this project are the following:
 ---
 ### Introduction
 
-#### 1. This project utilizes Deep Neural Networks and Convolutional Neural Networks which is derived from traditional LeNet and Multiscale Convolutional Neural Network. The dataset can be retrived from [German Traffic Sign official website] (http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset)
+#### 1. This project utilizes Deep Neural Networks and Convolutional Neural Networks which is derived from traditional LeNet and Multiscale Convolutional Neural Network. The dataset can be retrived from [German Traffic Sign official website](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset)
 
 
 ### Data Set Summary & Exploration
