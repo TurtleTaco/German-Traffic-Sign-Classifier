@@ -42,9 +42,9 @@ signs data set:
 * The shape of a traffic sign image is ?
 * The number of unique classes/labels in the data set is ?
 
-#### 2. Include an exploratory visualization of the dataset.
+#### 2. Exploratory visualization of the dataset.
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
+The images below includes a preview of the dataset from class 0 - 41. Their corresponding sign name can be found in [mapping]()
 
 ![alt text][image1]
 
