@@ -87,14 +87,26 @@ My final model consisted of the following layers:
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | Input         		| 32x32x1 Gray Scled, Normalized and Standardized images   							| 
-| Convolution 3x3     	| 1x1 stride, same padding, outputs 32x32x64 	|
+| Convolution 5x5x1x8     	| 1x1 stride, VALID padding, outputs 28x28x8 	|
 | RELU					|												|
-| Max pooling	      	| 2x2 stride,  outputs 16x16x64 				|
-| Convolution 3x3	    | etc.      									|
-| Fully connected		| etc.        									|
-| Softmax				| etc.        									|
-|						|												|
-|						|												|
+| Max pooling (conv1)	      	| 2x2 stride,  outputs 14x14x8 				|
+| Convolution 5x5x8x16	    | 1x1 stride, VALID padding, outputs 10x10x16      									|
+| RELU					|		
+| Max pooling (conv2)	      	| 2x2 stride,  outputs 5x5x16 				|
+| Convolution 4x4x16x300     	| 1x1 stride, VALID padding, outputs 2x2x300 	|
+| RELU					|												|
+| Max pooling (conv3)	      	| 2x2 stride,  outputs 1x1x300 				|
+| Concatenate (conv2 + conv3)			| 5x5x16 + 1x1x300 = 1x700        									|
+| Dropout			| Keep probability: 0.5     									|
+| Fully connected		| Weight 700x400, output 1x400      									|
+| RELU					|												|
+| Fully connected		| Weight 400x200, output 1x200     									|
+| RELU					|												|
+| Fully connected		| Weight 200x84, output 1x84    									|
+| RELU					|												|
+| Fully connected		| Weight 84x43, output 1x43   									|
+| RELU					|												|
+| Softmax				|       									|
  
 
 
