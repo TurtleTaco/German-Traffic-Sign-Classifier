@@ -52,7 +52,8 @@ The images below includes a preview of the dataset from class 0 - 41. Their corr
 
 <img align="left" src="./README/preview1.png">
 <img align="left" src="./README/preview2.png">
-<br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
 
 ### Design and Test Model Architecture
 
@@ -76,7 +77,7 @@ Notice that the valid and test set is the same as before. Augmenting the valid a
 <img align="left" src="./README/test_remastered.png">
 <img align="left" src="./README/valid_remastered.png">
 <img align="left" src="./README/test_remastered.png">
-<br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 #### 2. Model Architecture
 
 My final model consisted of the following layers:
