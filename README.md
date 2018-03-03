@@ -134,48 +134,37 @@ The model tuning process consists of the following steps:
 
 ### Test a Model on New Images
 
-#### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
+#### 1. Test on data outside testing dataset
 
-Here are five German traffic signs that I found on the web:
+The new images used for testing are shown as below:
+<img align="left" src="./README/five_web.png">
 
-![alt text][image4] ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
+These images has much higher qualities even if being resized to 32x32. They should be easy for the model to classify.
 
-The first image might be difficult to classify because ...
-
-#### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
+#### 2. Test results of new images
 
 Here are the results of the prediction:
 
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Stop Sign      		| Stop sign   									| 
-| U-turn     			| U-turn 										|
-| Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
+| 100 km/h speed limit      		| No passing of vehicles over 3.5   									| 
+| Ahead Only    			| Ahead Only								|
+| General Caution		| General Caution											|
+|  Stop     		| Stop					 				|
+| 70 km/h speed limit			| 70 km/h speed limit      							|
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
+The model was able to correctly classify 4 of the 5 traffic signs, which gives an accuracy of 80%. The test accuracy is 93.1%. This has high probability of the reason of having samll test set consists of only 5 images.
 
-#### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
+#### 3. Computing the certainty of prediction using Softmax probability to compute centainty from score.
+The code for making predictions on my final model is located in the 14th cell of the Ipython notebook. The results are shown as follows:
 
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
+<img align="left" src="./README/top5_1.png">
+<img align="left" src="./README/top5_2.png">
 
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
+### Visualizing the Neural Network
+#### 1. Visualization of the Neual Network internal layers
 
-| Probability         	|     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
-
-
-For the second image ... 
-
-### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
-#### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
+<img align="left" src="./README/feature_map.png">
 
 
