@@ -112,26 +112,24 @@ My final model consisted of the following layers:
 
 #### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
-To train the model, I used an ....
+The model is trained on NVIDIA 1070 with approximately 5 sec. per EPOCH. The batch size uses 100 images per batch, trained for 30 EPOCHS, learning rate of 0.0009 and keep probability in dropout layer of 0.5.
 
-#### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
+#### 4. Training result and model tuning
 
-My final model results were:
-* training set accuracy of ?
-* validation set accuracy of ? 
-* test set accuracy of ?
+The model achieved final validation accuracy of 95.1% after 30 EPOCHS and 93.1% accuracy in test set. The model adpted the idea from Multiscale Neural Network which achieved 99.17% accuracy in German Traffic Sign classification challenge. 
 
-If an iterative approach was chosen:
-* What was the first architecture that was tried and why was it chosen?
-* What were some problems with the initial architecture?
-* How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
-* Which parameters were tuned? How were they adjusted and why?
-* What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
+The model tuning process consists of the following steps:
 
-If a well known architecture was chosen:
-* What architecture was chosen?
-* Why did you believe it would be relevant to the traffic sign application?
-* How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
+* First model uses LeNet but increased depth of convolutional layer.
+* By increasing the convolutional layer depth, more features are expected to be extracted.
+* The initial model is being evaluated on "augmented validation and testing dataset" which later proves to be wrong when comparing results with others in the community using the original validation and test set. The augmented validation and test set uses the same techniques used to augment training dataset.
+* After discarding the augmented validation and training dataset, the reported accuracy has increased from 85% to 93% with the same architecture as LeNet but deeper convolutional layer.
+* By mimicing the architecture used in Multiscale Convolutional Neural Network, 2nd convolutional layer and 3rd convolutional layers are concatenated and further fed into fully connected layers.
+* This approch helps propogate the earlier extracted features from 2nd layer being considering together with "higher level feature" extracted from 3rd layer be fed into fully connected layer and takes a part in the final classification.
+* This model however experienced with overfitting with almost 97% accuracy in validation set but 92% accuracy in test set.
+* Dropout layer with parameter keeping probability of 0.5 is used to prevent overfitting.
+* The model no longer has overfitting problem.
+* Tuning learning rate higher than 0.001 produces worse model, adjusting the learning rate to 0.0009 results in a better model which is the final model used in this project.
  
 
 ### Test a Model on New Images
