@@ -44,6 +44,7 @@ The data set summary are retrived from numpy and visualized with matplotlib libr
 <img align="left" src="./README/test_raw.png">
 <img align="left" src="./README/valid_raw.png">
 <img align="left" src="./README/test_raw.png">
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
 #### 2. Exploratory visualization of the dataset.
 
