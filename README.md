@@ -166,7 +166,7 @@ As shown in the below equations, increasing the number of training images can de
 
 Applying only the first method (decrease model complexity) until the model reaches dvc* can produce the minimum out-sample error although in-sample error has a slightly increase. This method is effective because the ultimate goal of training a neural network is to achieve low out-sample error rather than in-sample error (overfitting).
 
-<img align="left" src="./README/Screen Shot 2018-03-05 at 11.41.00 AM.png"  height="200" width="800"> 
+<img align="left" src="./README/Screen Shot 2018-03-05 at 11.41.00 AM.png"  height="150" width="700"> 
 <img align="left" src="./README/Screen Shot 2018-03-05 at 12.11.40 PM.png"  height="200" width="200">
 
 #### 3. Computing the certainty of prediction using Softmax probability to compute centainty from score.
