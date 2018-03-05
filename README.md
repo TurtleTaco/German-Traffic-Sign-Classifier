@@ -172,8 +172,8 @@ Applying only the first method (decrease model complexity) until the model reach
 #### 3. Computing the certainty of prediction using Softmax probability to compute centainty from score.
 The code for making predictions on my final model is located in the 14th cell of the Ipython notebook. The results are shown as follows:
 
-<img align="left" src="./README/top5_1.png">
-<img align="left" src="./README/top5_2.png">
+<img align="left" src="./README/top5_1.png" height="42" width="42">
+<img align="left" src="./README/top5_2.png" height="42" width="42">
 
 ### Visualizing the Neural Network
 #### 1. Visualization of the Neual Network internal layers
