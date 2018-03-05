@@ -62,7 +62,7 @@ However, another issue of the dataset is big variance between the number of trai
 
 Notice that the valid and test set is the same as before. Augmenting the valid and test dataset will change the evaluation metrics, and results in different testing conditions and accuracy evaluation compared to other researchers using the same validation and test set
 
-<img align="left" src="./README/test_remastered.png">
+<img align="left" src="./README/train_remastered.png">
 <img align="left" src="./README/valid_remastered.png">
 <img align="left" src="./README/test_remastered.png">
 
