@@ -154,7 +154,20 @@ Here are the results of the prediction:
 | 70 km/h speed limit			| 70 km/h speed limit      							|
 
 
-The model was able to correctly classify 4 of the 5 traffic signs, which gives an accuracy of 80%. The test accuracy is 93.1%. This has high probability of the reason of having samll test set consists of only 5 images.
+The model was able to correctly classify 4 of the 5 traffic signs, which gives an accuracy of 80%. The test accuracy is 93.1%.
+
+The reasons for such decrease in accuracy are as follows:
+1. Model too complicated.
+2. Training set too small.
+
+A more complicated model means high vc dimension. In the context of neural networks, deeper convolutional layers or more hidden layers both causes the model to be more complicated thus results in higher vc dimension. As result, more complicated model can easily fit training set more accurately (decrease in-sample error Ein) but losses model generalization skill at the same time. This effect can be observed when testing the model in out-sample test cases.
+
+As shown in the below equations, increasing the number of training images can decrease the gap between in-sample error and out-sample error, which is another method to increase the out-sample error.
+
+Applying only the first method (decrease model complexity) until the model reaches dvc* can produce the minimum out-sample error although in-sample error has a slightly increase. This method is effective because the ultimate goal of training a neural network is to achieve low out-sample error rather than in-sample error (overfitting).
+
+<img align="left" src="./README/Screen Shot 2018-03-05 at 11.41.00 AM.png"> 
+<img align="left" src="./README/Screen Shot 2018-03-05 at 12.11.40 PM.png">
 
 #### 3. Computing the certainty of prediction using Softmax probability to compute centainty from score.
 The code for making predictions on my final model is located in the 14th cell of the Ipython notebook. The results are shown as follows:
