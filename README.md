@@ -11,18 +11,6 @@ The goals / steps of this project are the following:
 * Use the model to make predictions on new images
 * Analyze the softmax probabilities of the new images
 
-
-[//]: # (Image References)
-
-[image1]: ./examples/visualization.jpg "Visualization"
-[image2]: ./examples/grayscale.jpg "Grayscaling"
-[image3]: ./examples/random_noise.jpg "Random Noise"
-[image4]: ./examples/placeholder.png "Traffic Sign 1"
-[image5]: ./examples/placeholder.png "Traffic Sign 2"
-[image6]: ./examples/placeholder.png "Traffic Sign 3"
-[image7]: ./examples/placeholder.png "Traffic Sign 4"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
-
 ---
 ### Introduction
 
@@ -166,7 +154,7 @@ As shown in the below equations, increasing the number of training images can de
 
 Applying only the first method (decrease model complexity) until the model reaches dvc* can produce the minimum out-sample error although in-sample error has a slightly increase. This method is effective because the ultimate goal of training a neural network is to achieve low out-sample error rather than in-sample error (overfitting).
 
-<img align="left" src="./README/Screen Shot 2018-03-05 at 11.41.00 AM.png"  height="90" width="588"> 
+<img align="left" src="./README/dvc.png"  height="90" width="588"> 
 <img align="left" src="./README/Screen Shot 2018-03-05 at 12.11.40 PM.png"  height="260" width="260">
 
 #### 3. Computing the certainty of prediction using Softmax probability to compute centainty from score.
