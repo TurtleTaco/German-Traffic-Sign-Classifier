@@ -166,14 +166,14 @@ As shown in the below equations, increasing the number of training images can de
 
 Applying only the first method (decrease model complexity) until the model reaches dvc* can produce the minimum out-sample error although in-sample error has a slightly increase. This method is effective because the ultimate goal of training a neural network is to achieve low out-sample error rather than in-sample error (overfitting).
 
-<img align="left" src="./README/Screen Shot 2018-03-05 at 11.41.00 AM.png"> 
-<img align="left" src="./README/Screen Shot 2018-03-05 at 12.11.40 PM.png">
+<img align="left" src="./README/Screen Shot 2018-03-05 at 11.41.00 AM.png"  height="42" width="42"> 
+<img align="left" src="./README/Screen Shot 2018-03-05 at 12.11.40 PM.png"  height="42" width="42">
 
 #### 3. Computing the certainty of prediction using Softmax probability to compute centainty from score.
 The code for making predictions on my final model is located in the 14th cell of the Ipython notebook. The results are shown as follows:
 
-<img align="left" src="./README/top5_1.png" height="42" width="42">
-<img align="left" src="./README/top5_2.png" height="42" width="42">
+<img align="left" src="./README/top5_1.png">
+<img align="left" src="./README/top5_2.png">
 
 ### Visualizing the Neural Network
 #### 1. Visualization of the Neual Network internal layers
